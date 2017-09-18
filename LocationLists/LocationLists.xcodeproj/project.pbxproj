@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		BC6F22E11F707B670016CE69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6F22E01F707B670016CE69 /* AppDelegate.swift */; };
-		BC6F22E31F707B670016CE69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6F22E21F707B670016CE69 /* ViewController.swift */; };
 		BC6F22E61F707B670016CE69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC6F22E41F707B670016CE69 /* Main.storyboard */; };
 		BC6F22E81F707B670016CE69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC6F22E71F707B670016CE69 /* Assets.xcassets */; };
 		BC6F22EB1F707B670016CE69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC6F22E91F707B670016CE69 /* LaunchScreen.storyboard */; };
 		BC6F22F61F707B670016CE69 /* LocationListsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6F22F51F707B670016CE69 /* LocationListsTests.swift */; };
 		BC6F23011F707B680016CE69 /* LocationListsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6F23001F707B680016CE69 /* LocationListsUITests.swift */; };
+		BC6F230F1F707C040016CE69 /* LocationListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6F230E1F707C040016CE69 /* LocationListTableViewController.swift */; };
+		BC6F23151F707CBD0016CE69 /* LocationLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6F23141F707CBD0016CE69 /* LocationLists.swift */; };
+		BC6F23181F707CE40016CE69 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6F23171F707CE40016CE69 /* Item.swift */; };
+		BC6F231C1F707FF30016CE69 /* LocationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6F231B1F707FF30016CE69 /* LocationListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,6 @@
 /* Begin PBXFileReference section */
 		BC6F22DD1F707B670016CE69 /* LocationLists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationLists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC6F22E01F707B670016CE69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BC6F22E21F707B670016CE69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BC6F22E51F707B670016CE69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC6F22E71F707B670016CE69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC6F22EA1F707B670016CE69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,10 @@
 		BC6F22FC1F707B680016CE69 /* LocationListsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationListsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC6F23001F707B680016CE69 /* LocationListsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListsUITests.swift; sourceTree = "<group>"; };
 		BC6F23021F707B680016CE69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC6F230E1F707C040016CE69 /* LocationListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListTableViewController.swift; sourceTree = "<group>"; };
+		BC6F23141F707CBD0016CE69 /* LocationLists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationLists.swift; sourceTree = "<group>"; };
+		BC6F23171F707CE40016CE69 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		BC6F231B1F707FF30016CE69 /* LocationListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationListCell.swift; path = ../LocationListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +104,12 @@
 			isa = PBXGroup;
 			children = (
 				BC6F22E01F707B670016CE69 /* AppDelegate.swift */,
-				BC6F22E21F707B670016CE69 /* ViewController.swift */,
-				BC6F22E41F707B670016CE69 /* Main.storyboard */,
+				BC6F23101F707C080016CE69 /* View Controller */,
+				BC6F23111F707C260016CE69 /* View */,
+				BC6F23161F707CCA0016CE69 /* Model */,
 				BC6F22E71F707B670016CE69 /* Assets.xcassets */,
-				BC6F22E91F707B670016CE69 /* LaunchScreen.storyboard */,
 				BC6F22EC1F707B670016CE69 /* Info.plist */,
+				BC6F22E91F707B670016CE69 /* LaunchScreen.storyboard */,
 			);
 			path = LocationLists;
 			sourceTree = "<group>";
@@ -123,6 +130,32 @@
 				BC6F23021F707B680016CE69 /* Info.plist */,
 			);
 			path = LocationListsUITests;
+			sourceTree = "<group>";
+		};
+		BC6F23101F707C080016CE69 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BC6F230E1F707C040016CE69 /* LocationListTableViewController.swift */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		BC6F23111F707C260016CE69 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC6F22E41F707B670016CE69 /* Main.storyboard */,
+				BC6F231B1F707FF30016CE69 /* LocationListCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BC6F23161F707CCA0016CE69 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC6F23141F707CBD0016CE69 /* LocationLists.swift */,
+				BC6F23171F707CE40016CE69 /* Item.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +295,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC6F22E31F707B670016CE69 /* ViewController.swift in Sources */,
+				BC6F23181F707CE40016CE69 /* Item.swift in Sources */,
+				BC6F231C1F707FF30016CE69 /* LocationListCell.swift in Sources */,
+				BC6F230F1F707C040016CE69 /* LocationListTableViewController.swift in Sources */,
+				BC6F23151F707CBD0016CE69 /* LocationLists.swift in Sources */,
 				BC6F22E11F707B670016CE69 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
