@@ -16,6 +16,12 @@ class LocationList: NSObject, NSCoding {
     var name: String
     var list: [Item]
     
+    var progress: Float {
+        get {
+            return Float(inactiveLists) / Float(list.count)
+        }
+    }
+    
     var activeLists: Int {
         get {
             var activeItemCount = 0
@@ -57,10 +63,9 @@ class LocationList: NSObject, NSCoding {
         return "\(name): has \(list.count) item/s"
     }
 
-    init(name: String, list: [Item], image: UIImage?) {
+    init(name: String, list: [Item]) {
         self.name = name
         self.list = list
-        self.image = image
         
     }
     
@@ -73,15 +78,12 @@ class LocationList: NSObject, NSCoding {
         
         let sampleItemArray = [sampleItem1,sampleItem2,sampleItem3]
         
-        let locationList1 = LocationList(name: "One", list: [], image: nil)
-        let locationList2 = LocationList(name: "Two", list: sampleItemArray, image: nil)
-        let locationList3 = LocationList(name: "Three", list: sampleItemArray, image: nil)
-        let locationList4 = LocationList(name: "Four", list: sampleItemArray, image: nil)
-        let locationList5 = LocationList(name: "Five", list: sampleItemArray, image: nil)
-        let locationList6 = LocationList(name: "Six", list: sampleItemArray, image: nil)
-        let locationList7 = LocationList(name: "Seven", list: sampleItemArray, image: nil)
+        let locationList1 = LocationList(name: "Target", list: [])
+        let locationList2 = LocationList(name: "CostCo", list: sampleItemArray)
+        let locationList3 = LocationList(name: "GNC", list: sampleItemArray)
         
-        return [locationList1,locationList2,locationList3,locationList4,locationList5,locationList6,locationList7]
+        
+        return [locationList1,locationList2,locationList3]
     }
     
     //MARK: - NSCoding Protocols + Saving & Loading
@@ -118,11 +120,7 @@ class LocationList: NSObject, NSCoding {
         guard let name = aDecoder.decodeObject(forKey: PropertyKeys.name) as? String,
             let list = aDecoder.decodeObject(forKey: PropertyKeys.list) as? [Item] else { return nil }
         
-        print("decoded List \(list)")
-        
-        let image = aDecoder.decodeObject(forKey: PropertyKeys.image) as? UIImage
-        
-        self.init(name: name, list: list, image: image)
+        self.init(name: name, list: list)
         
     }
     

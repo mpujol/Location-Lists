@@ -21,7 +21,8 @@ class LocationListTableViewController: UITableViewController {
         
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+//         self.navigationItem.rightBarButtonItem = editButtonItem
+        
         
         //Load the data
         if locationLists.isEmpty {
@@ -66,7 +67,7 @@ class LocationListTableViewController: UITableViewController {
         cell.listLabel.text = "\(locationList.inactiveLists) out of \(locationList.list.count) Complete"
         
         
-        cell.listProgressView.progress = locationList.list.isEmpty ? 100.0 : Float(locationList.inactiveLists) / Float(locationList.list.count)
+        cell.listProgressView.progress = locationList.list.isEmpty ? 0.0 : locationList.progress
         cell.statusLevel.text = locationList.isActive ? "Active" : "Inactive"
         
 
