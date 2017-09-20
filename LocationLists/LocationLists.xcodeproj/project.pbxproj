@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC33210F1F71E3C700207068 /* LocationListDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC33210E1F71E3C700207068 /* LocationListDetailTableViewController.swift */; };
 		BC6F22E11F707B670016CE69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6F22E01F707B670016CE69 /* AppDelegate.swift */; };
 		BC6F22E61F707B670016CE69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC6F22E41F707B670016CE69 /* Main.storyboard */; };
 		BC6F22E81F707B670016CE69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC6F22E71F707B670016CE69 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC33210E1F71E3C700207068 /* LocationListDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListDetailTableViewController.swift; sourceTree = "<group>"; };
 		BC6F22DD1F707B670016CE69 /* LocationLists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationLists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC6F22E01F707B670016CE69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC6F22E51F707B670016CE69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				BC6F230E1F707C040016CE69 /* LocationListTableViewController.swift */,
+				BC33210E1F71E3C700207068 /* LocationListDetailTableViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC6F23181F707CE40016CE69 /* Item.swift in Sources */,
+				BC33210F1F71E3C700207068 /* LocationListDetailTableViewController.swift in Sources */,
 				BC6F231C1F707FF30016CE69 /* LocationListCell.swift in Sources */,
 				BC6F230F1F707C040016CE69 /* LocationListTableViewController.swift in Sources */,
 				BC6F23151F707CBD0016CE69 /* LocationLists.swift in Sources */,
@@ -550,6 +554,7 @@
 				BC6F23071F707B680016CE69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC6F23081F707B680016CE69 /* Build configuration list for PBXNativeTarget "LocationListsTests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +563,7 @@
 				BC6F230A1F707B680016CE69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC6F230B1F707B680016CE69 /* Build configuration list for PBXNativeTarget "LocationListsUITests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +572,7 @@
 				BC6F230D1F707B680016CE69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

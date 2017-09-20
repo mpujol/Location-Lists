@@ -1,37 +1,23 @@
 //
-//  LocationListTableViewController.swift
+//  LocationListDetailTableViewController.swift
 //  LocationLists
 //
-//  Created by Michael Pujol on 9/18/17.
+//  Created by Michael Pujol on 9/19/17.
 //  Copyright © 2017 Michael Pujol. All rights reserved.
 //
 
 import UIKit
 
-class LocationListTableViewController: UITableViewController {
+class LocationListDetailTableViewController: UITableViewController {
 
-    var locationLists: [LocationList] = []
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-        
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-//         self.navigationItem.rightBarButtonItem = editButtonItem
-        
-        
-        //Load the data
-        if locationLists.isEmpty {
-            
-            locationLists = LocationList.loadSampleLocationLists()
-            
-        }
-        
-        
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,40 +27,28 @@ class LocationListTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return locationLists.count
-    }
-
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let reuseIdentifier = "LocationListCell"
-        
-//        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? LocationListCell else { fatalError("Unable to dequeue location list cell") }
-        
         // Configure the cell...
-        
-        let locationList = locationLists[indexPath.row]
-        
-        cell.nameLabel.text = locationList.name
-        cell.listLabel.text = "\(locationList.inactiveLists) out of \(locationList.list.count) Complete"
-        
-        
-        cell.listProgressView.progress = locationList.list.isEmpty ? 0.0 : locationList.progress
-        cell.statusLevel.text = locationList.isActive ? "Active" : "Inactive"
-        
 
         return cell
     }
+    */
     
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        if let header = view as? UITableViewHeaderFooterView {
+            header.textLabel?.textColor = UIColor.black
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.0
+    }
 
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -83,7 +57,7 @@ class LocationListTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -93,14 +67,14 @@ class LocationListTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    
+    */
 
-    
+    /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
 
     }
-    
+    */
 
     /*
     // Override to support conditional rearranging of the table view.
