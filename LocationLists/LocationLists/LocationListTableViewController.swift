@@ -23,7 +23,6 @@ class LocationListTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
 //         self.navigationItem.rightBarButtonItem = editButtonItem
         
-        
         //Load the data
         if locationLists.isEmpty {
             
@@ -110,14 +109,28 @@ class LocationListTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
+    @IBAction func unwindLocationListDetail(sender: UIStoryboardSegue) {
+        
+    }
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier ==  "showLocationListDetail" {
+            let locationListDetailVC = segue.destination as! LocationListDetailTableViewController
+            if let indexPath = tableView.indexPathForSelectedRow {
+                locationListDetailVC.locationList = locationLists[indexPath.row]
+            }
+        }
+        
+        
+        
     }
-    */
+    
 
 }
