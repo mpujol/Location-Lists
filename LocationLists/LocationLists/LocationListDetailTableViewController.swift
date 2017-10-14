@@ -29,7 +29,15 @@ class LocationListDetailTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        updateUI()
+        //check to see if you are modifying or creating a new location list
+        
+        if let selectedLocationList = locationList {
+            updateUI()
+        } else {
+            locationList = LocationList(name: "", list: [])
+        }
+        
+        
         
     }
     
@@ -124,6 +132,28 @@ class LocationListDetailTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
+        if let currentSegueIdentifier = segue.identifier {
+            
+            switch currentSegueIdentifier {
+            case "saveUnwind":
+                if let locationList = locationList {
+                    let name = nameTextField.text ?? ""
+                    
+                    var list: [Item] = []
+                    
+                    if !locationList.list.isEmpty {
+                        list = locationList.list
+                    }
+                    
+                    self.locationList = LocationList(name: name, list: list)
+                    print(locationList)
+                    
+                }
+            default:
+                break
+            }
+            
+        }
         
     }
     

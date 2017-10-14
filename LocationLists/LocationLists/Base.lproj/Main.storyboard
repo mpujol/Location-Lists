@@ -238,10 +238,14 @@
                     <navigationItem key="navigationItem" id="Lph-vh-DZW">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Dj4-7o-4Kg">
                             <connections>
-                                <segue destination="Gim-lM-bDl" kind="unwind" identifier="cancelUnwind" unwindAction="unwindLocationListDetailWithSender:" id="xmh-Ix-9Is"/>
+                                <segue destination="Gim-lM-bDl" kind="unwind" identifier="cancelUnwind" unwindAction="unwindLocationListDetailWithSegue:" id="jGJ-f5-B7s"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="bO4-WE-bhd"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="bO4-WE-bhd">
+                            <connections>
+                                <segue destination="Gim-lM-bDl" kind="unwind" identifier="saveUnwind" unwindAction="unwindLocationListDetailWithSegue:" id="frv-YN-2Ze"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="listLabel" destination="N7l-PB-Tkh" id="tDT-Ma-yHp"/>

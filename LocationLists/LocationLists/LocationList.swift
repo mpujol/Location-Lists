@@ -1,6 +1,6 @@
 //
-//  LocationLists.swift
-//  LocationLists
+//  LocationList.swift
+//  LocationList
 //
 //  Created by Michael Pujol on 8/2/17.
 //  Copyright © 2017 Michael Pujol. All rights reserved.

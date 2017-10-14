@@ -15,7 +15,7 @@
 		BC6F22F61F707B670016CE69 /* LocationListsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6F22F51F707B670016CE69 /* LocationListsTests.swift */; };
 		BC6F23011F707B680016CE69 /* LocationListsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6F23001F707B680016CE69 /* LocationListsUITests.swift */; };
 		BC6F230F1F707C040016CE69 /* LocationListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6F230E1F707C040016CE69 /* LocationListTableViewController.swift */; };
-		BC6F23151F707CBD0016CE69 /* LocationLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6F23141F707CBD0016CE69 /* LocationLists.swift */; };
+		BC6F23151F707CBD0016CE69 /* LocationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6F23141F707CBD0016CE69 /* LocationList.swift */; };
 		BC6F23181F707CE40016CE69 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6F23171F707CE40016CE69 /* Item.swift */; };
 		BC6F231C1F707FF30016CE69 /* LocationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6F231B1F707FF30016CE69 /* LocationListCell.swift */; };
 /* End PBXBuildFile section */
@@ -52,7 +52,7 @@
 		BC6F23001F707B680016CE69 /* LocationListsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListsUITests.swift; sourceTree = "<group>"; };
 		BC6F23021F707B680016CE69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC6F230E1F707C040016CE69 /* LocationListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListTableViewController.swift; sourceTree = "<group>"; };
-		BC6F23141F707CBD0016CE69 /* LocationLists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationLists.swift; sourceTree = "<group>"; };
+		BC6F23141F707CBD0016CE69 /* LocationList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationList.swift; sourceTree = "<group>"; };
 		BC6F23171F707CE40016CE69 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		BC6F231B1F707FF30016CE69 /* LocationListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationListCell.swift; path = ../LocationListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,7 +155,7 @@
 		BC6F23161F707CCA0016CE69 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BC6F23141F707CBD0016CE69 /* LocationLists.swift */,
+				BC6F23141F707CBD0016CE69 /* LocationList.swift */,
 				BC6F23171F707CE40016CE69 /* Item.swift */,
 			);
 			name = Model;
@@ -305,7 +305,7 @@
 				BC33210F1F71E3C700207068 /* LocationListDetailTableViewController.swift in Sources */,
 				BC6F231C1F707FF30016CE69 /* LocationListCell.swift in Sources */,
 				BC6F230F1F707C040016CE69 /* LocationListTableViewController.swift in Sources */,
-				BC6F23151F707CBD0016CE69 /* LocationLists.swift in Sources */,
+				BC6F23151F707CBD0016CE69 /* LocationList.swift in Sources */,
 				BC6F22E11F707B670016CE69 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

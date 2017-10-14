@@ -26,7 +26,7 @@ class LocationListTableViewController: UITableViewController {
         //Load the data
         if locationLists.isEmpty {
             
-            locationLists = LocationList.loadSampleLocationLists()
+//            locationLists = LocationList.loadSampleLocationLists()
             
         }
         
@@ -112,7 +112,39 @@ class LocationListTableViewController: UITableViewController {
     
     // MARK: - Navigation
 
-    @IBAction func unwindLocationListDetail(sender: UIStoryboardSegue) {
+    @IBAction func unwindLocationListDetail(segue: UIStoryboardSegue) {
+
+        // collect the saved Location list if the save button is pressed otherwise break
+        
+        guard segue.identifier == "saveUnwind" else { return }
+        
+        let sourceViewController = segue.source as? LocationListDetailTableViewController
+        
+        if let locationList = sourceViewController?.locationList {
+
+            //Check to see if there is an item that was selected
+            
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                print("Found a selected index at \(selectedIndexPath)")
+                // you need to overwrite the information at the selected path
+                
+                locationLists[selectedIndexPath.row] = locationList
+                tableView.reloadData()
+            
+            } else {
+                //No item is selected to include it at the end of the location list array
+                
+                let newLocationListIndexPath = IndexPath(row: locationLists.count, section: 0)
+                locationLists.append(locationList)
+                
+                tableView.insertRows(at: [newLocationListIndexPath], with: .automatic)
+                
+            }
+            
+            //TODO: Save new or overwritten information
+            
+        
+        }
         
     }
     

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Item: NSObject, NSCoding {
+class Item: Codable, CustomStringConvertible {
     
     var name: String
     var isItemComplete: Bool
@@ -20,7 +20,7 @@ class Item: NSObject, NSCoding {
         
     }
     
-    override var description: String {
+    var description: String {
         return "\(name)"
     }
     
