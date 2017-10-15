@@ -24,10 +24,9 @@ class LocationListTableViewController: UITableViewController {
 //         self.navigationItem.rightBarButtonItem = editButtonItem
         
         //Load the data
-        if locationLists.isEmpty {
-            
-//            locationLists = LocationList.loadSampleLocationLists()
-            
+
+        if let savedLocationLists = LocationList.loadLocationLists() {
+            locationLists = savedLocationLists
         }
         
         
@@ -143,6 +142,7 @@ class LocationListTableViewController: UITableViewController {
             
             //TODO: Save new or overwritten information
             
+            LocationList.saveLocationLists(locationLists)
         
         }
         

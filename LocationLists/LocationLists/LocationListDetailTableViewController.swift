@@ -31,10 +31,11 @@ class LocationListDetailTableViewController: UITableViewController {
         
         //check to see if you are modifying or creating a new location list
         
-        if let selectedLocationList = locationList {
+        if locationList != nil {
             updateUI()
         } else {
             locationList = LocationList(name: "", list: [])
+            updateUI()
         }
         
         

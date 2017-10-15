@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Item: Codable, CustomStringConvertible {
+class Item: NSObject, Codable  {
     
     var name: String
     var isItemComplete: Bool
@@ -20,7 +20,7 @@ class Item: Codable, CustomStringConvertible {
         
     }
     
-    var description: String {
+    override var description: String {
         return "\(name)"
     }
     
@@ -31,6 +31,7 @@ class Item: Codable, CustomStringConvertible {
         static let isItemComplete = "isItemComplete"
     }
 
+    
     func encode(with aCoder: NSCoder) {
         aCoder.encode(name, forKey: PropertyKeys.name)
         aCoder.encode(isItemComplete, forKey: PropertyKeys.isItemComplete)
